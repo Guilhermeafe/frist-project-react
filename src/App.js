@@ -31,7 +31,7 @@ function App() {
 
       
 
-    setUsers([ ...users, newUser]);
+      setUsers([...users, newUser]);
   }
 
   function deleteUser(userId) {

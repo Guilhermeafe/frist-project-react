@@ -4,6 +4,7 @@ import People from "./assets/people.svg"
 import Arrow from "./assets/arrow.svg"
 import Trash from "./assets/trash.svg"
 
+
 import {
   Container,
   H1,
@@ -17,28 +18,25 @@ import {
 
 function App() {
   const [users, setUsers] = useState([]);
-  const inputName = useRef()
-  const inputAge = useRef()
+  const inputName = useRef();
+  const inputAge = useRef();
 
 
   async function addNewUser() {
-    const data = await axios.post("http://localhost:3001/users",
+    const { data: newUser }= await axios.post("http://localhost:3001/users/",
       {
         name: inputName.current.value,
         age: inputAge.current.value,
-      })
+      });
 
-    // setUsers([
-    //   ...users, {
-    //     id: Math.random(),
-    //     name: inputName.current.value,
-    //     age: inputAge.current.value
-    //   }])
+      
+
+    setUsers([ ...users, newUser]);
   }
 
   function deleteUser(userId) {
-    const newUsers = users.filter(user => user.id !== userId)
-    setUsers(newUsers)
+    const newUsers = users.filter(user => user.id !== userId);
+    setUsers(newUsers);
   }
 
   return <Container>

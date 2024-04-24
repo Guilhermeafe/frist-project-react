@@ -14,4 +14,12 @@
 - <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="react-logo">
 <br>
 <br>
+<p align="center"> Responsiveness :point_down:</p>
+<div align="center">
+<img src="https://github.com/Guilhermeafe/frist-project-react/blob/master/src/assets/img%201.jpg?raw=true" center width='250'>
+<br>
+<br>
+<img src="https://github.com/Guilhermeafe/frist-project-react/blob/master/src/assets/img%202.jpg?raw=true" center width='250'>
+</div>
+
 
